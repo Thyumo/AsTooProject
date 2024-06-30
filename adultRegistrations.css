@@ -14,3 +14,18 @@ tr, td, th {
 .warning-text {
     color: red;
 }
+
+.tables-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.first-column-header {
+    width: 60%;
+}
+
+.second-column-header {
+    width: 40%;
+}
