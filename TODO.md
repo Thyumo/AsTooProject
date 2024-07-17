@@ -18,7 +18,10 @@ Added the image too
 ## Thibault
 
 ### What I did
+- Created web component folder and first web component
 
 ### What I want to do next
+- Create other components (button, link, article, ...)
+- Improve global page layout
 
 ### Other ideas
