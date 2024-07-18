@@ -1,26 +1,29 @@
-class ChooseColorText extends HTMLElement {
+class ColorfulText extends HTMLElement {
     constructor() {
         super();
     }
 
-    connectedCallBack() {
         const shadow = this.attachShadow({ mode: "open" });
 
         const text = this.getAttribute("data-text");
-        const wantedColor = this.getAttribute("color");
+        const textColor = this.getAttribute("data-color");
 
         const paragraph = document.createElement("p");
-        paragraph.setAttribute("class", "choose-color-text");
+        paragraph.setAttribute("class", "colorful-text");
         paragraph.textContent = text;
 
         const style = document.createElement("style");
-        style.textContent = `.choose-color-text {color: ${wantedColor};}`;
+        style.textContent = `
+            .colorful-text {
+                color: ${textColor};
+            }
+        `;
 
         shadow.appendChild(style);
         shadow.appendChild(paragraph);
     }
 }
 
-customElements.define("choose-color-text", ChooseColorText)
+customElements.define("colorful-text", ColorfulText)
 
-export { ChooseColorText };
+export { ColorfulText };
