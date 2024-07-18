@@ -3,6 +3,7 @@ class ColorfulText extends HTMLElement {
         super();
     }
 
+    connectedCallback() {
         const shadow = this.attachShadow({ mode: "open" });
 
         const text = this.getAttribute("data-text");
