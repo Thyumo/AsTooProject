@@ -1,3 +1,19 @@
+body {
+    font-family: 'Alegreya Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F0E5E4;
+    color: #233043;
+}
+
+main {
+    margin: 0 auto;
+    padding: 0 48px;
+    width: calc(100% - 96px);
+    max-width: 1284px;
+    background-color: #f1f1f1;
+}
+
 .warning-text {
     color: red;
 }
