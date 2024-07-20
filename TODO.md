@@ -19,9 +19,12 @@ Added the image too
 
 ### What I did
 - Created web component folder and first web component
+- Improved global CSS
+- Created README
+- Chose color palette
 
 ### What I want to do next
 - Create other components (button, link, article, ...)
-- Improve global page layout
+- Implement menu component
 
 ### Other ideas
