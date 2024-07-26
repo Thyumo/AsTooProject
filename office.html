@@ -1,10 +1,71 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="./global.css">
         <title>Bureau</title>
+        <link rel="stylesheet" href="./global.css">
+        <script type="module" src="./webComponents/index.js"></script>
     </head>
     <body>
+        <template id="menubar-v2-template">
+            <style>
+                nav {
+                    display: flex;
+                    justify-content: center;
+                    border-top: 2px solid #233043;
+                    border-bottom: 2px solid #233043;
+                }
+
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    padding: 0;
+                    list-style: none;
+                }
+            </style>
+            <nav>
+                <ul>
+                    <slot></slot>
+                </ul>
+            </nav>
+        </template>
+
+        <template id="menuitem-v2-template">
+            <style>
+                li {
+                    flex: 1;
+                    display: flex;
+                    text-align: center;
+                }
+
+                a {
+                    flex: 1;
+                    min-width: max-content;
+                    padding: 6px 24px;
+                    text-decoration: none;
+                    color: inherit;
+                }
+
+                a:hover {
+                    background-color: #233043;
+                    color: #F0E5E4;
+                }
+            </style>
+            <li>
+                <a><slot></slot></a>
+            </li>
+        </template>
+
+        <header>
+            <p class="site-heading">ASTOOBAD</p>
+            <menubar-v2>
+                <menuitem-v2 data-href="#">Actualité</menuitem-v2>
+                <menuitem-v2 data-href="#">L'association</menuitem-v2>
+                <menuitem-v2 data-href="classes.html">Cours</menuitem-v2>
+                <menuitem-v2 data-href="insurance.html">Assurance</menuitem-v2>
+                <menuitem-v2 data-href="partnership.html">Partenaires</menuitem-v2>
+            </menubar-v2>
+        </header>
         <main>
             <h1 class="centered-titles">Bureau</h1>
             <p>L'ASTOOBAD est une association sportive de badminton en loisir et compétition située dans le 17e arrondissement de Paris.</p>
